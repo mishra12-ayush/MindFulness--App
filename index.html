@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>MindFulness</title>
+  </head>
+  <body>
+    <div class="app">
+
+      <div class="video-container">
+        <video loop>
+          <source src="./video/rain.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="time-select">
+        <button type="button" data-time="180">3 Minutes</button>     <!--data-time : data attribute(seconds) that can be used in JS-->
+        <button type="button" data-time="300">5 Minutes</button>
+        <button type="button" data-time="600">10 Minutes</button>
+      </div>
+
+
+      <div class="player">
+        <audio class="song">
+          <source src="./sounds/rain.mp3">
+        </audio>
+        <img src="./svg/play.svg" alt="play" class="play"></img>
+        <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg"> <!--track-outline.svg-->
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+        </svg>
+        <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg"> <!--moving-outline.svg-->
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+        </svg>
+        <h3 class="time-display">0:00</h3>
+      </div>
+
+
+      <div class="sound-picker">
+        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" name="button">
+          <img src="./svg/rain.svg" alt="rain">
+        </button>
+        <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4" name="button">
+          <img src="./svg/beach.svg" alt="beach">
+        </button>
+      </div>
+
+
+    </div>
+  <script src="app.js"> </script>
+  </body>
+</html>
